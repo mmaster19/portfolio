@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------
+   Tokens — direction A « Éditorial » (par défaut)
+   --------------------------------------------------------------- */
+:root {
+  --bg: #fafaf7;
+  --surface: #f2f1ec;
+  --text: #1a1a17;
+  --muted: #5c5b55;
+  --line: #e4e2da;
+  --accent: #2f4bc0;
+  --accent-contrast: #ffffff;
+  --accent-soft: #e8ecfa;
+
+  --font-display: var(--font-newsreader), Georgia, serif;
+  --font-body: var(--font-plex), system-ui, sans-serif;
+  --font-meta: var(--font-plex), system-ui, sans-serif;
+  --display-weight: 500;
+  --display-tracking: -0.02em;
+  --meta-transform: none;
+
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131311;
+    --surface: #1c1c19;
+    --text: #eceae3;
+    --muted: #a3a198;
+    --line: #2e2d29;
+    --accent: #9db0ff;
+    --accent-contrast: #131311;
+    --accent-soft: #1f2440;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-contrast: var(--accent-contrast);
+  --color-accent-soft: var(--accent-soft);
+}
+
+/* ---------------------------------------------------------------
+   Base
+   --------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--font-display);
+    font-weight: var(--display-weight);
+    letter-spacing: var(--display-tracking);
+  }
+  .meta {
+    font-family: var(--font-meta);
+    text-transform: var(--meta-transform);
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.01em;
+  }
+}
+
+/* Apparition discrète, uniquement si l'utilisateur accepte les animations */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    animation: reveal 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: calc(var(--i, 0) * 70ms);
+  }
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
