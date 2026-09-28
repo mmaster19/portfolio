@@ -63,6 +63,7 @@ export interface SiteContent {
   journey: {
     title: string;
     groups: Record<TimelineEntry["kind"], string>;
+    seeProject: string;
     items: TimelineEntry[];
   };
 

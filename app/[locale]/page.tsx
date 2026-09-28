@@ -1,5 +1,6 @@
 import { FeaturedProjects } from "@/components/home/FeaturedProjects";
 import { Hero } from "@/components/home/Hero";
+import { Timeline } from "@/components/home/Timeline";
 import { Container } from "@/components/layout/Container";
 import { getContent } from "@/content";
 import type { Locale } from "@/content/types";
@@ -13,6 +14,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       <Container>
         <Hero locale={locale} hero={content.hero} />
         <FeaturedProjects locale={locale} content={content} />
+        <Timeline locale={locale} content={content} />
       </Container>
     </main>
   );
