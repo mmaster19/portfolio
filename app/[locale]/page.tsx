@@ -1,3 +1,4 @@
+import { Contact } from "@/components/home/Contact";
 import { FeaturedProjects } from "@/components/home/FeaturedProjects";
 import { Hero } from "@/components/home/Hero";
 import { SkillGroups } from "@/components/home/SkillGroups";
@@ -17,6 +18,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         <FeaturedProjects locale={locale} content={content} />
         <Timeline locale={locale} content={content} />
         <SkillGroups locale={locale} content={content} />
+        <Contact contact={content.contact} />
       </Container>
     </main>
   );
