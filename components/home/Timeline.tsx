@@ -38,7 +38,7 @@ export function Timeline({ locale, content }: { locale: Locale; content: SiteCon
                           href={localePath(locale, `/projets/${item.project}`)}
                           className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline hover:underline-offset-4"
                         >
-                          {journey.seeProject} : {projectName(item.project)}
+                          {journey.seeProject} {projectName(item.project)}
                           <span aria-hidden>→</span>
                         </Link>
                       )}

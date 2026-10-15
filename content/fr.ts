@@ -77,7 +77,7 @@ export const fr = {
   journey: {
     title: "Parcours",
     groups: { work: "Expérience", education: "Formation" },
-    seeProject: "Voir le projet",
+    seeProject: "Voir le projet :",
     items: [
       {
         period: "Depuis mai 2026",
