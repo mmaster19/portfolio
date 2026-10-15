@@ -39,7 +39,7 @@ Règles utiles :
 - **Compétences** : chaque compétence doit citer au moins un projet dans `provenBy` (`"veno"` ou `"smartroute"`).
 - **Repos privés** : laisser le lien à `null`, il ne sera pas affiché.
 - **Images** : déposer les captures dans `public/projects/veno/` et `public/projects/smartroute/`, avec les noms déclarés dans `content/fr.ts` (`screenshots`, `cover`). Une image absente n'est simplement pas affichée.
-- **CV** : déposer le PDF dans `public/cv/`, sous le nom indiqué dans `content/shared.ts` (`PERSON.cv`).
+- **CV** : déposer le PDF FR et EN dans `public/cv/`, sous les noms indiqués dans `content/shared.ts` (`PERSON.cv.fr`, `PERSON.cv.en`).
 
 Après une modification, vérifier que tout compile :
 

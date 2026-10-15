@@ -21,7 +21,7 @@ export const PERSON = {
   email: "mbaye.moussa.pro@gmail.com",
   linkedin: null as string | null, // TODO : URL LinkedIn
   github: null as string | null, // TODO : URL GitHub
-  cv: "/cv/moussa-mbaye-cv.pdf",
+  cv: { fr: "/cv/moussa-mbaye-cv-fr.pdf", en: "/cv/moussa-mbaye-cv-en.pdf" },
 } as const;
 
 export const PROJECT_LINKS = {

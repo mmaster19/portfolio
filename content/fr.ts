@@ -29,7 +29,7 @@ export const fr = {
       "6 mois à partir du 15 février 2027 · Alsace, Bâle, Suisse du Nord-Ouest",
     ctaProjects: "Voir mes projets",
     ctaContact: "Me contacter",
-    cv: { label: "Télécharger mon CV (PDF)", href: PERSON.cv },
+    cv: { label: "Télécharger mon CV (PDF)", href: PERSON.cv.fr },
     proofs: [
       { label: "En production : getveno.fr", href: PROJECT_LINKS.venoSite, external: true },
       { label: "Démo : Nearest Neighbor + 2-opt", href: "/projets/smartroute#demo" },
@@ -97,13 +97,13 @@ export const fr = {
       },
       {
         period: "Mars – avr. 2024",
-        title: "Développeur web — Cité administrative", // TODO : ajouter « stage BTS » si c'en était un
+        title: "Développeur web — Cité administrative",
         place: "Colmar",
         line: "Refonte de l'intranet : recueil des besoins, nouvelle architecture de l'information, mise en œuvre.",
         kind: "work",
       },
       {
-        period: "2026 – 2027",
+        period: "Sept. 2026 – févr. 2027",
         title: "Licence Pro Conception, Développement et Test de Logiciels",
         place: "Université Haute-Alsace, Mulhouse",
         line: "Génie logiciel, tests, projet SmartRoute.",
@@ -318,7 +318,7 @@ export const fr = {
       ],
       stack: [
         { layer: "Mobile", items: ["React Native", "Expo", "TypeScript", "SQLite (hors ligne)"] },
-        { layer: "API", items: ["C#", "ASP.NET Core (REST, authentification JWT)"] },
+        { layer: "API", items: ["C#", "ASP.NET Core (REST, authentification JWT)", "Géocodage et routage"] },
         { layer: "Données", items: ["MongoDB"] },
         { layer: "Infra", items: ["Docker", "GitLab CI/CD"] },
       ],
