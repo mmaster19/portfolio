@@ -61,12 +61,11 @@ et `/fr/...` redirige vers l'URL sans préfixe.
 1. Pousser le repo sur GitHub.
 2. Sur [vercel.com/new](https://vercel.com/new), importer le repo. Vercel détecte Next.js tout seul : ne rien changer
    aux commandes de build.
-3. **Variable d'environnement** (Settings → Environment Variables) :
-   - `NEXT_PUBLIC_SITE_URL` = l'URL publique définitive, sans slash final (ex. `https://moussambaye.fr`).
-   - Sans cette variable, le site utilise le domaine de production Vercel (`*.vercel.app`) pour le canonical,
-     l'Open Graph et le sitemap.
-   - La variable est lue au build : il faut redéployer après l'avoir modifiée.
-4. **Domaine personnalisé** (Settings → Domains) : ajouter le domaine et suivre les instructions DNS,
-   puis mettre à jour `NEXT_PUBLIC_SITE_URL` et redéployer.
+3. **Domaine** (Settings → Domains) : ajouter `mbayemoussa.com` et `www.mbayemoussa.com`, puis suivre les
+   instructions DNS de Vercel chez le registrar. Choisir l'une des deux versions comme principale : l'autre y redirige.
+4. **URL du site** : `https://mbayemoussa.com` est la valeur par défaut de `SITE_URL` (`content/shared.ts`),
+   utilisée pour le canonical, l'Open Graph et le sitemap. Aucune variable d'environnement n'est nécessaire.
+   Pour changer de domaine, définir `NEXT_PUBLIC_SITE_URL` (sans slash final) dans Settings → Environment Variables,
+   puis redéployer : la variable est lue au build.
 
 Chaque push sur `main` déclenche un déploiement de production, et chaque autre branche une preview.

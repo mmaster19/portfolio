@@ -5,16 +5,10 @@
 
 /**
  * URL publique du site, sans slash final. Utilisée par metadata, OG, sitemap, canonical.
- * Ordre de priorité :
- *  1. NEXT_PUBLIC_SITE_URL (à définir sur Vercel une fois le domaine choisi) ;
- *  2. le domaine de production Vercel, fourni automatiquement au build ;
- *  3. localhost, en local.
+ * NEXT_PUBLIC_SITE_URL permet de la surcharger (ex. pour tester un autre domaine) ;
+ * sinon, le domaine de production est utilisé partout, y compris en preview et en local.
  */
-export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL && `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`) ||
-  "http://localhost:3000"
-).replace(/\/+$/, "");
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://mbayemoussa.com").replace(/\/+$/, "");
 
 export const PERSON = {
   name: "Moussa Mbaye",
